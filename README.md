@@ -27,10 +27,7 @@ From the base directory:
 
 ```shell
 $ npm install
-$ cd client
-$ npm install
 $ npm build
-$ cd ..
 $ npm start
 ```
 
@@ -53,8 +50,7 @@ First install your node modules in the base directory and the client directory
 
 ```shell
 $ npm install
-$ cd client
-$ npm install
+$ npm build
 ```
 
 Then you can run these apps as one entity, with the express app serving the compiled app (which lives in `client/dist`)
