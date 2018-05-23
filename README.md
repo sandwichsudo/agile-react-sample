@@ -3,7 +3,7 @@
 This is an example express app with a React front end.
 
 It is based on this tutorial: https://daveceddia.com/deploy-react-express-app-heroku/ 
-and uses React Slingshot as a base. See the client README for more info on that.
+and uses React Slingshot as a base. See the client README for more info on React Slingshot.
 
 ## Should I use this?
 
@@ -19,14 +19,51 @@ Basically you don't have to use this, but you can if it's helpful.
 
 ## Getting started
 
-First install your node modules (using npm or yarn) in the base directory and the client directory
+### TLDR;
 
-Then you can run these apps as one with the express app serving the compiled app (`client/dist`)
-To do this with `npm start` in the base directory
+#### Show me the app
 
-You can also run the front end with webpack-dev setup, and point it at the local api.
+From the base directory:
+
+```shell
+$ npm install
+$ cd client
+$ npm install
+$ npm build
+$ cd ..
+$ npm start
+```
+
+App will be available on http://localhost:5000
+
+#### I want to edit the front end
+
+Follow the steps in the section above first (so you have the express app running on http://localhost:5000)
+Then, from the base directory:
+
+```shell
+$ cd client
+$ npm start
+```
+The dev front end will be available on http://localhost:3000
+
+### Talk me through this a bit
+
+First install your node modules in the base directory and the client directory
+
+```shell
+$ npm install
+$ cd client
+$ npm install
+```
+
+Then you can run these apps as one entity, with the express app serving the compiled app (which lives in `client/dist`)
+
+Do this by runnning `npm start` in the base directory
+
+You can also run the front end with webpack-dev setup, and point it at the express app.
 To do this, run `npm start` in the base directory and then `npm start` in the client directory.
-You will then have the api endpoints available at `localhost:5000` (eg `localhost:5000/agile-prices`)
+You will then have the express app available at `localhost:5000` (with the example api call `localhost:5000/agile-prices`)
 and the dev front end available at `localhost:3000`
 
 ### Happy hacking!
