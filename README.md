@@ -21,44 +21,48 @@ Basically you don't have to use this, but you can if it's helpful.
 
 ### TLDR;
 
+- Install node and yarn
+
 #### Show me the app
 
 From the base directory:
 
 ```shell
-$ npm install
-$ npm build
-$ npm start
+$ yarn
+$ yarn build
+$ yarn start
 ```
 
 App will be available on http://localhost:5000
 
 #### I want to edit the front end
 
-Follow the steps in the section above first (so you have the express app running on http://localhost:5000)
+Follow the steps in the section above first (so you have the express app running on http://localhost:5000 and all your node modules installed)
 Then, from the base directory:
 
 ```shell
 $ cd client
-$ npm start
+$ yarn start
 ```
 The dev front end will be available on http://localhost:3000
 
 ### Talk me through this a bit
 
-First install your node modules in the base directory and the client directory
+First install node and yarn (if you don't have these already)
+
+Now install your node modules in the base directory and the client directory
 
 ```shell
-$ npm install
-$ npm build
+$ yarn
+$ yarn build
 ```
 
 Then you can run these apps as one entity, with the express app serving the compiled app (which lives in `client/dist`)
 
-Do this by runnning `npm start` in the base directory
+Do this by runnning `yarn start` in the base directory
 
 You can also run the front end with webpack-dev setup, and point it at the express app.
-To do this, run `npm start` in the base directory and then `npm start` in the client directory.
+To do this, run `yarn start` in the base directory and then `yarn start` in the client directory.
 You will then have the express app available at `localhost:5000` (with the example api call `localhost:5000/agile-prices`)
 and the dev front end available at `localhost:3000`
 

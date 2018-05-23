@@ -23,6 +23,7 @@ export default {
     publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
+  mode: 'production',
   plugins: [
         new webpack.optimize.SplitChunksPlugin(),
     // Hash the files using MD5 so that their names change when the content changes.
